@@ -25,7 +25,6 @@ body {
   background-color: var(--color-dark-300);
   color: var(--color-light);
   margin: 0;
-  min-height: 100vh;
 }
 
 
@@ -90,7 +89,7 @@ body {
 }
 
 .social-link:active {
-  scale: 98%;
+  transform: scale(98%);
 }
 
 
@@ -100,7 +99,7 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  padding-inline: 24px;
+  padding: 40px 24px;
 }
 
 
