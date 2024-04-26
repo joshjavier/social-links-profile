@@ -1,0 +1,124 @@
+/* GLOBALS */
+
+:root {
+  --color-primary: #C5F82A;
+  --color-dark-100: #333333;
+  --color-dark-200: #1F1F1F;
+  --color-dark-300: #141414;
+  --color-light: #FFFFFF;
+
+  /**
+   * Fluid spacing
+   * @link https://utopia.fyi/clamp/calculator?a=375,432,24—40
+   */
+   --fluid-24-40: clamp(1.5rem, -5.0789rem + 28.0702vi, 2.5rem);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  background-color: var(--color-dark-300);
+  color: var(--color-light);
+  margin: 0;
+  min-height: 100vh;
+}
+
+
+/* BLOCKS */
+
+.social-card {
+  background-color: var(--color-dark-200);
+  text-align: center;
+  padding: var(--fluid-24-40);
+  margin-inline: auto;
+  width: 100%;
+  max-width: 384px;
+  border-radius: 10px;
+}
+
+.social-avatar {
+  margin-bottom: 28px;
+}
+
+.social-avatar img {
+  border-radius: 9999px;
+}
+
+.social-name {
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.social-location {
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-block: 0;
+}
+
+.social-tagline {
+  margin-block: 28px 26px;
+}
+
+.social-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.social-link {
+  display: block;
+  padding-block: 14px;
+  background-color: var(--color-dark-100);
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  transition-duration: 40ms;
+}
+
+.social-link:hover, .social-link:active {
+  background-color: var(--color-primary);
+  color: var(--color-dark-100);
+  transition-duration: 160ms;
+}
+
+.social-link:active {
+  scale: 98%;
+}
+
+
+/* COMPOSITION */
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-inline: 24px;
+}
+
+
+/* UTILITIES */
+
+.visually-hidden:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
